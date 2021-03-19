@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "promise": "^8.1.0",
     "random": "^3.0.3"
   }
 }

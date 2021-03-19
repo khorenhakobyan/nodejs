@@ -1,13 +1,21 @@
-//3.Գրել ծրագիր որը աշխատացնելիս կստեղծի 8 նիշանոց պատահական թվերից կազմված անուն ունեցող txt ֆայլ և
-//այդ ֆայի մեջ Օպերացիան համակարգի central processing unit (CPU) քանակը(os.cpus()):
+// 3․ Ստեծել ֆունկցիա , որը input.txt ֆայլի պարունակությունը կկարդա , հետո պարունակության տեքստը կկիսի երկու մասի և միաժամանակ կգրի առաջին մասը output1.txt , իսկ երկրորդը output2.txt ֆայլերի մեջ։
+// Օգտվել 'fs/promises' գրադարանից և օգտագործել async/await:
 
-// const os = require("os");
-// const fs = require("fs");
+//const promise = require("promise");
+const promise = require("fs").promisees;
+//const http = require("http");
 
-// const random = require("random");
-// let num = Math.floor(Math.random() * 1000000000);
-// fs.writeFile(num + "." + "txt", JSON.stringify(os.cpus().length.toString()), function (err) {
-//     if (err) {
-//         return err.message
-//     }
-// })
+function readTxt() {
+    const readData = await promise.readFile("./input.txt").toString();
+    const onePart = readData.slice(0, readData.length / 2);
+    const secondPart = readData.slice(readData.length / 2);
+    await promise.writeFile('output1.txt', onePart);
+    await promise.writeFile('output2.txt', secondPart);
+
+
+}
+readTxt().then(()=>{
+    console.log("already read")
+}).catch((err)=>{
+    console.log(err)
+})
