@@ -5,7 +5,7 @@
 const promise = require("fs").promisees;
 //const http = require("http");
 
-function readTxt() {
+ async function readTxt() {
     const readData = await promise.readFile("./input.txt").toString();
     const onePart = readData.slice(0, readData.length / 2);
     const secondPart = readData.slice(readData.length / 2);
