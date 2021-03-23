@@ -1,46 +1,28 @@
-//3.Ստեղծել RemoveSpecialChars կլաս, որը ժառանգում է  Transform կլասին:
-//_transform մեթոդը վերասահմանել այնպես, որ իր միջով անցնող տեքստից հեռացնել հատուկ սիմվոլները:
+//3.Գրել ծրագիր, որը կկարդա homework3.txt ֆայլի պարունակությունը, տեքստից կհեռացնի  ստորակետները  և
+//կգրի replace.txt ֆայլում, որից հետո ջնջել homework3.txt ֆայլը:
+// const fs = require('fs').promises;
 
-// const { Readable, Duplex, Writable, Transform } = require('stream');
-// const fs = require('fs');
+// const path = './homework3.txt'
 
-// const readStream = fs.createReadStream('task_3.txt ', {
-//     highWaterMark: 4
-// })
-// const writeStreamToFile = fs.createWriteStream('homeworkr5.txt');
-// readStream.pipe().pipe(writeStream);
-// process.stdin.pipe(transform).pipe(writeStreamToFile);
+// async function removeCommas() {
+//     const homework3_text = await fs.readFile('./homework3.txt', 'utf-8');
+//     const replace_text = homework3_text.replace(/,/g, '');
 
 
-// class RemoveSpecialChars extends Transform {
-//     readStream;
-//     constructor() {
-//         super();
-//     }
+//     await Promise.all([
+//         fs.writeFile('replace.txt', replace_text),
 
-//     _transform(chunk, encoding, cb) {
-//         let data = String(chunk);
-//         if (this.readStream.match(/[`~,.<>;':"\/\[\]\|{}()-=_+]/)) {
-//             data = readStream.replace(/[^a-zA-Z ]/g, "")
-//         }
 
-//     }
-//     flush(cb) {
-//         if (this.readStream) {
-//             try {
-//                 this.push(JSON.parse(this.readStream));
-//             }
-//             catch (err) {
-
-//             }
-//         }
-//         cb();
-//     }
+//     ]);
 
 // }
-// const SpecialCharsObj = new RemoveSpecialChars([1, 2, 3, 4]);
 
 
-// readStream.on('data', (char) => {
-//     console.log(char.toString())
-// })
+// removeCommas().then(() => {
+//     console.log('done');
+//     fs.unlink(path)
+// }).catch((err) => {
+//     console.log(err);
+// });
+
+

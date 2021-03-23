@@ -1,19 +1,13 @@
-//1. Ստեղծել readStream որը input.txt-ից կկարդա ինֆորմացիան 10 բայթով և
-//կաևտածի կոնսոլում այն chunk-երը , որոնք հատուկ սիմվոլներ չունեն:
-// const { Readable, Duplex, Writable, Transform } = require('stream');
-// const fs = require('fs');
+// //1. Գրել ծրագիր որը կստեղծի ֆայլ Ձեր համակարգչի user անունով և
+// //այդ ֆայլում գրել համակարգչի userinfo-ն:
 
-// const readStream = fs.createReadStream('input.txt', {
-//     highWaterMark: 10
-// });
+// const fs = require("fs");
+// const os = require("os")
+// fs.writeFile('file.txt', JSON.stringify(os.userInfo()).toString(), { flag: "r+" }, (err) => {
+//     if (err) {
+//         throw err;
 
-// readStream.on('data', function (chunk) {
-
-//     if (!/[^a-zA-Z0-9]/.test('data')) {
-//         console.log(chunk.toString())
 //     }
-//     else {
 
-//         console.log("error");
-//     }
+
 // });

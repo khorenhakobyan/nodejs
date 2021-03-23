@@ -1,27 +1,39 @@
-//4.Ստեղծել Promise վերադարձնող ֆունկցիա որը ստանում է տեքստ ֆայլի հասցե և
-//տեքստի բառերի առաջին տառերը սաքում մեծատառ․ 
+//4.Ունենք const web=['html','css','js','txt'] զանգված: Գրել ծրագի որ կստեղծի զանգվածի անունով
+//պապկա: Զանգվածի անդամներից այդ պապկայում ստեղծել  ֆայլեր հերթական անդամի անունով և 
+//վերջավորությունն էլ նույնը լինի(օրինակ html.html) պարունակություն էլ այդ անդամը:
+// const fs = require('fs-extra').promises;
+// const web = ['html', 'css', 'js', 'txt'];
+// const data = "html.html"
 
-// const fs = require('fs').promises;
-// const myPromise = new Promise((resolve, reject) => {
-//     const readFile = fs.readFile('./read.txt', function (err, data) {
-//         if (err) {
-//             throw err;
-//         }
+// async function createFolder() {
+//     await fs.mkdir("web", (err) => {
+//         if (err) return err;
 
 //     });
-// })
-// function titleCase(readFile) {
-//     var splitStr = str.toLowerCase().split(" ");
+// };
 
-//     for (let i = 0; i < splitStr.length; i++) {
-//         if (splitStr.length[i] < splitStr.length) {
-//             splitStr[i].charAt(0).toUpperCase();
-//         }
+// createFolder().then(() => {
+//     console.log('created!');
 
-//         readFile = splitStr.join(" ");
+//     web.forEach(function (item) {
+//         fs.writeFile(item + "." + item, item + "." + item, function (err) {
+//             if (err) {
+//                 console.log("not created");
+//             } else {
+//                 console.log("The file was saved!");
+//             }
+//         })
+
+//     });
+
+// }).catch((err) => {
+//     if (err) {
+//         console.log(err)
 //     }
+// })
 
-//     return readFile;
-// }
-// myPromise.then(titleCase(readFile))
+
+
+
+
 
